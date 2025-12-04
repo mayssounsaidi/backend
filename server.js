@@ -1,10 +1,6 @@
-const express = require('express');
-const app = express();
+require('dotenv').config();
+const mongoose = require('mongoose');
 
-app.get('/', (req, res) => {
-  res.send('Hello Express 🚀');
-});
-
-app.listen(3000, () => {
-  console.log('Serveur lancé sur http://localhost:3000');
-});
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connecté ✅'))
+  .catch(err => console.error('Erreur MongoDB :', err));
