@@ -5,11 +5,25 @@ meta {
 }
 
 post {
-  url: 
-  body: none
+  url: http://localhost:3000/projects
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "nom": "Application Mobile",
+    "description": "Développement de l’application mobile pour iOS et Android",
+    "proprietaire": "6931c45a78cc6ef5c32d313f",
+    "statut": "en cours",
+    "dateCreation": "2025-12-04T17:30:00Z"
+  }
+  
+  
+  
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

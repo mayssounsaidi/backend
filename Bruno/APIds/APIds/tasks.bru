@@ -5,11 +5,26 @@ meta {
 }
 
 post {
-  url: 
-  body: none
+  url: http://localhost:3000/tasks
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "titre": "Créer la page d’accueil",
+    "description": "Développer la page d’accueil avec la liste des produits",
+    "statut": "doing",
+    "deadline": "2025-12-20T23:59:00Z",
+    "projet": "6931c9ad78cc6ef5c32d314f",
+    "utilisateur": "6931c53878cc6ef5c32d3141",
+    "dateCreation": "2025-12-04T17:45:00Z"
+  }
+  
+  
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
